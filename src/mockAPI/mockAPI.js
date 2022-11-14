@@ -6,6 +6,7 @@ const data = [
         offer: false,
         price: 0.75,
         category: "mutantApe",
+        detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae non quia soluta praesentium reiciendis, veniam, temporibus ad facilis ipsam delectus voluptatum eos maxime repudiandae cupiditate. Voluptatibus qui adipisci cum natus."
     },
     {
         id: 2,
@@ -13,7 +14,7 @@ const data = [
         title: "#21536",
         offer: false,
         price: 0.75,
-        category: "mutantApe",
+        category: "boredApe",
     },
 ];
 

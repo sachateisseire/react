@@ -10,8 +10,8 @@ function Cards(props){
               <h5 className="card-title">{props.title}</h5>
               <p className="card-text">{`Price: ${props.price} ETH`}</p>
               <div className="container d-flex justify-content-around m-1">
-                  <button href="#" class="btn btn-secondary ">Detalles</button>
-                  <button href="#" class="btn btn-success">Comprar</button>
+                  <button href="#" className="btn btn-secondary ">Detalles</button>
+                  <button href="#" className="btn btn-success">Comprar</button>
               </div>
             </div>
           </div>

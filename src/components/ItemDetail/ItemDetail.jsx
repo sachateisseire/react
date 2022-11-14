@@ -2,7 +2,7 @@ import Cards from "../Cards/Cards"
 import { getNftData } from "../../mockAPI/mockAPI"
 import { useState, useEffect } from "react"
 
-function ItemList(props){
+function ItemDetail(props){
     const [nftList, setNftList] = useState ([])
 
     useEffect(
@@ -31,4 +31,4 @@ function ItemList(props){
     )
 }
 
-export default ItemList
+export default ItemDetail

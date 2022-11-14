@@ -1,14 +1,14 @@
-import ItemList from "../ItemList/ItemList"
+import ItemDetail from "../ItemDetail/ItemDetail"
 
 
-function ItemListContainer () {
+function ItemDetailContainer () {
 
         return  <main className="container-fluid-{breakpoint}" id="App-main">
                     <div className="container my-3" id="App-sub-main">
-                        <ItemList/>
+                        <ItemDetail/>
                     </div>
                 </main>
 
 }
 
-export default ItemListContainer
+export default ItemDetailContainer
