@@ -15,10 +15,20 @@ const data = [
         offer: false,
         price: 0.75,
         category: "boredApe",
+        detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae non quia soluta praesentium reiciendis, veniam, temporibus ad facilis ipsam delectus voluptatum eos maxime repudiandae cupiditate. Voluptatibus qui adipisci cum natus."
     },
 ];
 
 export function getNftData () {
     return new Promise ((resolve) => {
-        setTimeout (() => resolve(data), 1500)})
+        setTimeout (() => resolve(data), 100)})
+}
+
+export function getNftDetail (idParams) {
+    return new Promise ((resolve) => {
+        let nftReq = data.find ((nft) => {
+           return (nft.id === Number(idParams))
+        } )
+        console.log(nftReq)
+        setTimeout (() => resolve(nftReq), 100)})
 }

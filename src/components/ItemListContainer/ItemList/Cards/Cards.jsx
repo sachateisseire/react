@@ -1,4 +1,5 @@
-
+import React from "react";
+import { Link} from "react-router-dom"
 
 function Cards(props){
     return (
@@ -10,7 +11,7 @@ function Cards(props){
               <h5 className="card-title">{props.title}</h5>
               <p className="card-text">{`Price: ${props.price} ETH`}</p>
               <div className="container d-flex justify-content-around m-1">
-                  <button href="#" className="btn btn-secondary ">Detalles</button>
+                  <Link to={`/nft/${props.id}`} className="btn btn-secondary ">Detalles</Link>
                   <button href="#" className="btn btn-success">Comprar</button>
               </div>
             </div>

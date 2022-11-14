@@ -1,8 +1,8 @@
-import Cards from "../Cards/Cards"
-import { getNftData } from "../../mockAPI/mockAPI"
+import Cards from "./Cards/Cards"
+import { getNftData } from "../../../mockAPI/mockAPI"
 import { useState, useEffect } from "react"
 
-function ItemDetail(props){
+function ItemList(props){
     const [nftList, setNftList] = useState ([])
 
     useEffect(
@@ -20,6 +20,7 @@ function ItemDetail(props){
             {nftList.map((nft) =>{
                 return <Cards
                             key={nft.id}
+                            id={nft.id}
                             img={nft.img}
                             title={nft.title}
                             price={nft.price}
@@ -31,4 +32,4 @@ function ItemDetail(props){
     )
 }
 
-export default ItemDetail
+export default ItemList

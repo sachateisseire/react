@@ -1,4 +1,5 @@
-
+import React from "react"
+import {Link} from "react-router-dom"
 
 function Navbar(){
 
@@ -8,7 +9,7 @@ function Navbar(){
           <div className="container">
             <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
               <div className="container-fluid">
-                <a className="navbar-brand" href="#">Home</a>
+                <Link to="/" className="navbar-brand">Home</Link>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>
@@ -16,7 +17,7 @@ function Navbar(){
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Bored Ape</a>
+                    <Link to="/detail" className="nav-link">Bored Ape</Link>
                     </li>
                     <li className="nav-item">
                       <a className="nav-link" href="#">Mutant Ape</a>

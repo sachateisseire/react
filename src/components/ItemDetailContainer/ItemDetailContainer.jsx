@@ -1,5 +1,4 @@
-import ItemDetail from "../ItemDetail/ItemDetail"
-
+import ItemDetail from "./ItemDetail/ItemDetail"
 
 function ItemDetailContainer () {
 
