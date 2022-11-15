@@ -5,7 +5,7 @@ const data = [
         title: "#21536",
         offer: false,
         price: 0.75,
-        category: "mutantApe",
+        category: "mutantape",
         detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae non quia soluta praesentium reiciendis, veniam, temporibus ad facilis ipsam delectus voluptatum eos maxime repudiandae cupiditate. Voluptatibus qui adipisci cum natus."
     },
     {
@@ -14,7 +14,7 @@ const data = [
         title: "#21536",
         offer: false,
         price: 0.75,
-        category: "boredApe",
+        category: "boredape",
         detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae non quia soluta praesentium reiciendis, veniam, temporibus ad facilis ipsam delectus voluptatum eos maxime repudiandae cupiditate. Voluptatibus qui adipisci cum natus."
     },
 ];
@@ -29,6 +29,12 @@ export function getNftDetail (idParams) {
         let nftReq = data.find ((nft) => {
            return (nft.id === Number(idParams))
         } )
-        console.log(nftReq)
         setTimeout (() => resolve(nftReq), 100)})
+}
+
+export function getNftByCategory(idCategoryParams){
+    return new Promise ((resolve) => {
+        let filterNft = data.filter( nft => nft.category === idCategoryParams )
+        setTimeout (() => resolve(filterNft), 100)
+    })
 }

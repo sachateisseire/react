@@ -17,6 +17,7 @@ function App() {
           <Navbar/>
             <Routes>
               <Route path="/" element={<ItemListContainer/>}/>
+              <Route path="/category/:categoryID" element={<ItemListContainer/>}/>
               <Route path="/nft/:id" element={<ItemDetailContainer/>}/>
               <Route path="*" element={ <h4>Error 404</h4> } />
             </Routes>

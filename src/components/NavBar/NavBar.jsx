@@ -17,10 +17,10 @@ function Navbar(){
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <Link to="/detail" className="nav-link">Bored Ape</Link>
+                    <Link to="/category/boredape" className="nav-link">Bored Ape</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Mutant Ape</a>
+                    <Link to="/category/mutantape" className="nav-link">Mutant Ape</Link>
                     </li>
                     <li className="nav-item">
                       <a className="nav-link" href="#">KPR</a>

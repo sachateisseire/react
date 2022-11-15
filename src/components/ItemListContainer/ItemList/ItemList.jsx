@@ -1,17 +1,24 @@
 import Cards from "./Cards/Cards"
-import { getNftData } from "../../../mockAPI/mockAPI"
+import { getNftData, getNftByCategory } from "../../../mockAPI/mockAPI"
 import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 
 function ItemList(props){
     const [nftList, setNftList] = useState ([])
+    const {categoryID} = useParams()
 
     useEffect(
     () => {
-        getNftData().then((data) => {
-            setNftList(data)
-        })
-    }
-    )
+        if (categoryID === undefined) {
+            getNftData().then((data) => {
+                setNftList(data)
+            })
+        } else {
+            getNftByCategory(categoryID).then((data) => {
+                setNftList(data)
+            })
+        }
+    }, [categoryID])
 
     return (
         
@@ -25,6 +32,7 @@ function ItemList(props){
                             title={nft.title}
                             price={nft.price}
                             detail={nft.detail}
+                            category={nft.category}
                         />
             })}
             
