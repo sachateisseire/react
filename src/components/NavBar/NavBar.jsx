@@ -22,7 +22,7 @@ function Navbar(){
                     <li className="nav-item">
                     <Link to="/category/mutantape" className="nav-link">Mutant Ape</Link>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item"> 
                       <a className="nav-link" href="#">KPR</a>
                     </li>
                     <li className="nav-item">

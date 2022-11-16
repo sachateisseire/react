@@ -20,7 +20,7 @@ function ItemDetail(props){
         <div className="container-fluid d-flex justify-content-center">
             
 
-            <CardDetail price={nft.price} img={nft.img} detail={nft.detail} title={nft.title}/>
+            <CardDetail price={nft.price} img={nft.img} detail={nft.detail} title={nft.title} stock={nft.stock}/>
             
             
         </div>

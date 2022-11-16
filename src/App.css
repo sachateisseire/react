@@ -7,8 +7,9 @@
 }
 
 #App-main{
-    background-image: linear-gradient(to right top, #6043ec, #595cf1, #5870f2, white, #5f82f1, #6d93ee, #64a3f4, white, #62b1f7, #69bff8, #52cffe, white,  #41dfff, #46eefa, #5ffbf1);
+    background-image: linear-gradient(to right top, #6043ec, #595cf1, #5870f2, #5f82f1, #6d93ee, #64a3f4, #62b1f7, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     height: auto;
+    min-height: 850px;
     display: flex;
     justify-content: center;
     align-items: center;

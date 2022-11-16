@@ -22,7 +22,7 @@ function ItemList(props){
 
     return (
         
-        <div className="row row-cols-1 row-cols-md-4 g-4 my-1">
+        <div className="row row-cols-1 row-cols-md-4 g-4">
             
             {nftList.map((nft) =>{
                 return <Cards
@@ -33,6 +33,7 @@ function ItemList(props){
                             price={nft.price}
                             detail={nft.detail}
                             category={nft.category}
+                            stock={nft.stock}
                         />
             })}
             
