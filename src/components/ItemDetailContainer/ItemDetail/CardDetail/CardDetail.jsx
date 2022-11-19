@@ -12,11 +12,7 @@ function CardDetail(props){
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text">{`Price: ${props.price} ETH`}</p>
                 <p className="card-text">{props.detail}</p>
-                <ItemCount initial={1} stock={props.stock}/>
-                 <div className="container d-flex justify-content-around m-1">
-                  <Link to="/" className="btn btn-secondary ">Volver</Link>
-                  <button href="#" className="btn btn-success">Comprar</button>
-              </div>
+                <ItemCount initial={1} stock={props.stock} id={props.id}/>
             </div>
           </div>
         </div>
