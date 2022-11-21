@@ -1,8 +1,18 @@
 import React from "react";
+import {useState} from "react"
 import { Link } from "react-router-dom"
 import ItemCount from "../../../ItemCount/ItemCount";
 
 function Cards(props){
+  const[count, setCount] = useState(0)
+
+  function handleAddToCart (count) {
+    console.log("Agregaste items al carrito: ", count)
+    setCount(count)
+  }
+
+
+
     return (
 <>
         <div className="col">
@@ -25,9 +35,9 @@ function Cards(props){
 
               </div>
 
-
-              <ItemCount initial={1} stock={props.stock} id={props.id}/>
-
+              {count === 0 ?
+              <ItemCount onAddToCart={handleAddToCart} initial={1} stock={props.stock} id={props.id}/> : <a href="/x">Ver el carrito</a>
+              }
             </div>
           </div>
         </div>

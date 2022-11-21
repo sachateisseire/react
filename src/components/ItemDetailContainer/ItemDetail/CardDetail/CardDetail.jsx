@@ -1,8 +1,16 @@
 import {Link} from "react-router-dom"
 import ItemCount from "../../../ItemCount/ItemCount";
+import {useState} from "react"
 
 
 function CardDetail(props){
+  const[count, setCount] = useState(0)
+
+  function handleAddToCart (count) {
+    console.log("Agregaste items al carrito: ", count)
+    setCount(count)
+  }
+
     return (
 <>
 <div className="col-sm-4">
@@ -12,7 +20,10 @@ function CardDetail(props){
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text">{`Price: ${props.price} ETH`}</p>
                 <p className="card-text">{props.detail}</p>
-                <ItemCount initial={1} stock={props.stock} id={props.id}/>
+
+                {count === 0 ?
+                <ItemCount onAddToCart={handleAddToCart} initial={1} stock={props.stock} id={props.id}/> :  <a href="/x">Ver el carrito</a>
+                }
             </div>
           </div>
         </div>

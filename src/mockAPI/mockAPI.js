@@ -7,7 +7,7 @@ const data = [
         price: 0.75,
         category: "mutantape",
         detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae non quia soluta praesentium reiciendis, veniam, temporibus ad facilis ipsam delectus voluptatum eos maxime repudiandae cupiditate. Voluptatibus qui adipisci cum natus.",
-        stock:"2"
+        stock:"4"
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const data = [
         price: 0.75,
         category: "boredape",
         detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae non quia soluta praesentium reiciendis, veniam, temporibus ad facilis ipsam delectus voluptatum eos maxime repudiandae cupiditate. Voluptatibus qui adipisci cum natus.",
-        stock:"3"
+        stock:"7"
     },
 ];
 

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom"
 
-export default function ItemCount({stock, initial, id}) {
+export default function ItemCount({stock, initial, onAddToCart}) {
     const [count, setCount] = useState(initial)
 
     function handleSubstract(){
@@ -24,7 +24,7 @@ export default function ItemCount({stock, initial, id}) {
                 <button onClick={handleAdd} className="btn btn-primary btn-sm">+</button>
                 </div>
 
-                  <button onClick={handleAddToCart} href="#" className="btn btn-success">Comprar</button>
+                  <button onClick={()=>{onAddToCart(count)}} href="#" className="btn btn-success">Comprar</button>
 
 
         </div>
