@@ -7,7 +7,6 @@ function CardDetail(props){
   const[count, setCount] = useState(0)
 
   function handleAddToCart (count) {
-    console.log("Agregaste items al carrito: ", count)
     setCount(count)
   }
 
