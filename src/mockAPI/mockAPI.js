@@ -27,11 +27,15 @@ export function getNftData () {
 }
 
 export function getNftDetail (idParams) {
-    return new Promise ((resolve) => {
+    return new Promise ((resolve, reject) => {
         let nftReq = data.find ((nft) => {
            return (nft.id === Number(idParams))
         } )
-        setTimeout (() => resolve(nftReq), 0)})
+        setTimeout (() => {
+        if (nftReq === undefined)
+        reject (new Error("No se pudo encontrar el curso"))
+        else {resolve(nftReq)}
+        }, 1000)})
 }
 
 export function getNftByCategory(idCategoryParams){

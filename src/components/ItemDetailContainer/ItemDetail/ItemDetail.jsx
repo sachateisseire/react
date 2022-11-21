@@ -12,15 +12,17 @@ function ItemDetail(props){
         getNftDetail(id).then((data) => {
             setNft(data)
         })
-    }, [id]
-    )
+        .catch((error) => {
+            alert(error)
+        })
+    }, [id])
 
     return (
         
         <div className="container-fluid d-flex justify-content-center">
             
 
-            <CardDetail price={nft.price} img={nft.img} detail={nft.detail} title={nft.title} stock={nft.stock} id={nft.id}/>
+            <CardDetail price={nft.price} img={nft.img} detail={nft.detail} title={nft.title} stock={nft.stock} id={nft.id} category={nft.category}/>
             
             
         </div>
