@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemCount from "./components/ItemCount/ItemCount";
 import {CartContextProvider} from "./context/cartContext"
+import CartView from "./components/CartView.jsx/CartView";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
               <Route path="/category/:categoryID" element={<ItemListContainer/>}/>
               <Route path="/nft/:id" element={<ItemDetailContainer/>}/>
               <Route path="*" element={ <h4>Error 404</h4> } />
+              <Route path="/cart" element={ <CartView/> } />
             </Routes>
           <Footer/>
 

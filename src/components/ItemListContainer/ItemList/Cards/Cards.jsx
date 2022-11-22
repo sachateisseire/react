@@ -35,9 +35,7 @@ function Cards(props){
 
               </div>
 
-              {count === 0 ?
-              <ItemCount onAddToCart={handleAddToCart} initial={1} stock={props.stock} id={props.id}/> : <a href="/x">Ver el carrito</a>
-              }
+
             </div>
           </div>
         </div>

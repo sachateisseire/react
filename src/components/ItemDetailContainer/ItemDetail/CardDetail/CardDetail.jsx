@@ -26,7 +26,7 @@ function CardDetail(props){
                 <p className="card-text">{props.detail}</p>
 
                 {count === 0 ?
-                <ItemCount onAddToCart={handleAddToCart} initial={1} stock={props.stock} id={props.id}/> :  <a href="/x">Ver el carrito</a>
+                <ItemCount onAddToCart={handleAddToCart} initial={1} stock={props.stock} id={props.id}/> :  <Link to="/cart">Ver el carrito</Link>
                 }
             </div>
           </div>

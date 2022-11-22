@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 
 function ItemDetail(props){
     const [nft, setNft] = useState ([])
+    const [feedbackMsg, setFeedbackMsg] = useState(null)
     const {id} = useParams()
 
     useEffect(
@@ -13,7 +14,7 @@ function ItemDetail(props){
             setNft(data)
         })
         .catch((error) => {
-            alert(error)
+            setFeedbackMsg(error.message)
         })
     }, [id])
 
@@ -21,9 +22,12 @@ function ItemDetail(props){
         
         <div className="container-fluid d-flex justify-content-center">
             
-
-            <CardDetail price={nft.price} img={nft.img} detail={nft.detail} title={nft.title} stock={nft.stock} id={nft.id} category={nft.category}/>
+            {feedbackMsg !== null ? 
+                <h4 className="my-5">Error: {feedbackMsg}</h4>
+                :
             
+            <CardDetail price={nft.price} img={nft.img} detail={nft.detail} title={nft.title} stock={nft.stock} id={nft.id} category={nft.category}/>
+            }
             
         </div>
     )
