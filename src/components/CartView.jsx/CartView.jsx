@@ -1,17 +1,18 @@
 import React, {useContext} from "react"
 import { cartContext } from "../../context/cartContext"
-import ItemListContainer from "../ItemListContainer/ItemListContainer"
 
 function CartView() {
-    const { cart } = useContext(cartContext)
-    console.log(cart)
+    const { cart, removeItem } = useContext(cartContext)
 
     return (
         cart.map( nft => (
         <>
             <div className="modal-body">
-            <div>{nft.id}</div>
-            <div>{nft.count}</div>
+                <h4>{nft.id}</h4>
+                <h4>{nft.count}</h4>
+                <h4>Total Price: {nft.price * nft.count} ETH</h4>
+                <button onClick={ removeItem(nft.id)}>X</button>
+
             </div>
         </>
         ))

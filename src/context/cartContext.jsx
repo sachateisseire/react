@@ -11,15 +11,12 @@ function CartContextProvider(props){
         newCart.push(newItem)
         setCart(newCart)
     }
-////
-    function removeItem(idToRemove){
-        let newCart = cart.filter( itemInCart => {
-            return (itemInCart.id !== idToRemove)
-            setCart(newCart)
-        })
 
+    function removeItem(idToRemove) {
+        let newCart = cart.filter((itemInCart) => itemInCart.id !== idToRemove)
+        setCart(newCart)
     }
-////
+
 
 
     function getTotalItemCount(){
