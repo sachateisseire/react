@@ -9,10 +9,13 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import ItemCount from "./components/ItemCount/ItemCount";
 import {CartContextProvider} from "./context/cartContext"
 import CartView from "./components/CartView.jsx/CartView";
+import FirebaseApp from "./services/firebase";
 
 
 function App() {
+  console.log(FirebaseApp)
   return (
+  
 
   <div className="container-{breakpoint}" id="App">
     <CartContextProvider>

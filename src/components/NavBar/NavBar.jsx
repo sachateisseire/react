@@ -24,10 +24,10 @@ function Navbar(){
                     <Link to="/category/mutantape" className="nav-link">Mutant Ape</Link>
                     </li>
                     <li className="nav-item"> 
-                      <a className="nav-link" href="#">KPR</a>
+                    <Link to="/category/kpr" className="nav-link">KPR</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Art Gobblers</a>
+                    <Link to="/category/artgobblers" className="nav-link">Art Gobblers</Link>
                     </li>
                     <li className="nav-item">
                       <a className="nav-link active" href="#">Offers</a>

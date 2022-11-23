@@ -2,7 +2,7 @@ import React, {useContext} from "react"
 import { cartContext } from "../../context/cartContext"
 
 function CartView() {
-    const { cart, removeItem } = useContext(cartContext)
+    const { cart } = useContext(cartContext)
 
     return (
         cart.map( nft => (
@@ -11,7 +11,7 @@ function CartView() {
                 <h4>{nft.id}</h4>
                 <h4>{nft.count}</h4>
                 <h4>Total Price: {nft.price * nft.count} ETH</h4>
-                <button onClick={ removeItem(nft.id)}>X</button>
+                <button>X</button>
 
             </div>
         </>
