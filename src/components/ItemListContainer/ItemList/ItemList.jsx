@@ -1,7 +1,8 @@
 import Cards from "./Cards/Cards"
-import { getNftData, getNftByCategory } from "../../../mockAPI/mockAPI"
+
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import { getNftData, getNftByCategory } from "../../../services/firebase"
 
 function ItemList(props){
     const [nftList, setNftList] = useState ([])

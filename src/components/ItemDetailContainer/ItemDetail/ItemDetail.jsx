@@ -1,5 +1,5 @@
 import CardDetail from "./CardDetail/CardDetail"
-import { getNftDetail } from "../../../mockAPI/mockAPI"
+import { getNftDetail } from "../../../services/firebase"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
